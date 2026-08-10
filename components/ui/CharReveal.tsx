@@ -15,7 +15,7 @@ export function CharReveal({ text, baseDelay = 0.8, stagger = 0.05, className }:
     <span aria-label={text} className={className}>
       <span aria-hidden>
         {text.split("").map((ch, i) => (
-          <span key={i} className="inline-block overflow-hidden align-bottom">
+          <span key={i} className="inline-block overflow-hidden align-bottom py-[0.07em] -my-[0.07em]">
             <motion.span
               className="inline-block"
               initial={{ y: "115%", rotate: 6 }}
