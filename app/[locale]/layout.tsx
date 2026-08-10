@@ -7,6 +7,8 @@ import { ThemeProvider } from "next-themes";
 import { Space_Grotesk, Archivo, JetBrains_Mono } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import { AppShell } from "@/components/AppShell";
+import { PixelPageView } from "@/components/ui/MetaPixel";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 import "../globals.css";
 
 const grotesk = Space_Grotesk({
@@ -165,6 +167,7 @@ export default async function LocaleLayout({
       className={`${grotesk.variable} ${archivo.variable} ${jetbrains.variable}`}
     >
       <body className="noise min-h-screen bg-bg font-body text-fg antialiased">
+        <PixelPageView />
         <a href="#contenido" className="skip-link">
           {messages.meta.skip}
         </a>
@@ -174,6 +177,7 @@ export default async function LocaleLayout({
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages}>
             <AppShell>{children}</AppShell>
+            <CookieConsent />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

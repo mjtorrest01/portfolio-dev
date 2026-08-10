@@ -246,6 +246,12 @@
     "whatsappMsg": "Hola MJ, quiero que mi negocio tenga su web. ¿Cómo empezamos?",
     "seo": "Tener una web no debería ser un lujo ni una deuda. Por eso la ofrezco por suscripción: diseño, desarrollo, dominio y mantenimiento sin pagar miles de dólares de golpe. 2 webs de clientes ya publicadas y más en camino."
   },
+  "cookie": {
+    "title": "Privacidad y cookies",
+    "text": "Uso Google Analytics, Google Tag Manager y el píxel de Meta para medir visitas y mejorar el sitio. Al aceptar, guardo una cookie en tu navegador con tu decisión.",
+    "accept": "Aceptar y continuar",
+    "decline": "Rechazar"
+  },
   "footer": {
     "credit": "webs por suscripción",
     "backTop": "volver arriba",

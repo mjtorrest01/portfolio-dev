@@ -14,7 +14,8 @@
 - 🏢 **Proyectos reales** — Blue Horizon y Panamá Market, con badge `completada`
 - 🎨 **Animaciones** — hero con char reveal, auroras, cursor y anillo personalizados, tilt cards, marquee infinito
 - ♿ **Accesibilidad (WCAG 2.2)** — skip link, focus visible, `aria-controls`/`role="region"`, menú móvil con `Esc`, targets ≥ 24px
-- 🔍 **SEO** — sitemap con hreflang, `robots.txt`, `opengraph-image.png`, JSON-LD (`Person`, `Organization`, `FAQPage`)
+- 🔍 **SEO** — sitemap con hreflang, `robots.txt`, `opengraph-image.png`, JSON-LD (`Person`, `Organization`, `FAQPage`), verificado en Google Search Console
+- 🍪 **Rastreadores con consentimiento** — Google Analytics 4, Google Tag Manager y Meta Pixel solo se cargan tras aceptar (cookie `mj_consent`)
 
 ---
 
@@ -47,7 +48,7 @@
 │   └── sitemap.ts             # hreflang es/en + x-default
 ├── components
 │   ├── servicios/             # Secciones de negocio (Hero, Plans, FAQ, CTA…)
-│   └── ui/                    # ThemeToggle, LocaleSwitch, TiltCard, Magnetic…
+│   └── ui/                    # ThemeToggle, LocaleSwitch, CookieConsent, MetaPixel…
 ├── i18n
 │   ├── messages/              # es.json + en.json (todo el contenido)
 │   ├── navigation.ts          # createNavigation (Link, useRouter…)
@@ -57,6 +58,8 @@
 │   ├── data.ts                # Perfil, redes, contacto
 │   ├── data-servicios.ts      # Helper waLink() para WhatsApp
 │   └── animations.ts          # Easings compartidos
+├── public
+│   └── googleca90bb66ade8a84b.html  # Verificación de Google Search Console
 └── proxy.ts                   # Middleware i18n (Next 16)
 ```
 
@@ -100,6 +103,23 @@
 | 06 | Preguntas frecuentes | `#faq` |
 | — | CTA final + redes | `#contacto` |
 
+## 🍪 Privacidad y rastreadores
+
+El sitio cumple con el consentimiento previo a la medición:
+
+| Rastreador | ID | Carga |
+|------------|----|-------|
+| Google Tag Manager | `GTM-NNWX5D4C` | Solo tras aceptar |
+| Google Analytics 4 | `G-28WBDZ5HWY` | Solo tras aceptar |
+| Meta Pixel | `3582088715287818` | Solo tras aceptar |
+
+- El banner **«Privacidad y cookies»** avisa de los rastreadores y pide aceptar o rechazar (bilingüe, animado con Framer Motion)
+- La decisión se guarda en la cookie `mj_consent` (1 año, `path=/`, `SameSite=Lax`)
+- **Aceptar** → inyecta GTM, GA4 y Pixel con la primera visita ya contada (`PageView`)
+- **Rechazar** → ninguna cookie de rastreo se instala y el banner no vuelve a aparecer
+- El HTML prerenderizado (SSG) **no contiene** ningún código de rastreador
+- La verificación de Google Search Console se sirve desde `/googleca90bb66ade8a84b.html` (`public/`)
+
 ## ✍️ Personalización rápida
 
 | ¿Qué quieres cambiar? | Dónde |
@@ -108,6 +128,8 @@
 | Nombre, email, WhatsApp | `lib/data.ts` |
 | Redes sociales | `lib/data.ts` → `socials` (iconos: `instagram`, `facebook`, `x`, `github`) |
 | Mensaje de WhatsApp | Claves `…whatsappMsg` / `ctaMsg` de los mensajes |
+| Textos del banner de cookies | `i18n/messages/{es,en}.json` → `cookie` |
+| IDs de GTM / GA4 / Pixel | `components/ui/CookieConsent.tsx` |
 | Colores y tema | `app/globals.css` → tokens `--t-*` |
 
 ## 🚀 Despliegue

@@ -246,6 +246,12 @@
     "whatsappMsg": "Hi MJ, I want my business to have its website. How do we start?",
     "seo": "Having a website shouldn't be a luxury or a debt. That's why I offer it by subscription: design, development, domain and maintenance without paying thousands upfront. 2 client websites already live and more on the way."
   },
+  "cookie": {
+    "title": "Privacy & cookies",
+    "text": "I use Google Analytics, Google Tag Manager and the Meta pixel to measure visits and improve the site. By accepting, I save a cookie in your browser with your decision.",
+    "accept": "Accept & continue",
+    "decline": "Decline"
+  },
   "footer": {
     "credit": "subscription websites",
     "backTop": "back to top",
