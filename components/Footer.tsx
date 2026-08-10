@@ -11,7 +11,7 @@ export function Footer() {
   const heroT = useTranslations("hero");
 
   return (
-    <footer className="relative border-t-2 border-line bg-void/70 pt-12">
+    <footer className="relative overflow-hidden border-t-2 border-line bg-void/70 pt-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8">
         <div>
           <Link href="#inicio" className="flex items-center gap-2">
