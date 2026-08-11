@@ -373,6 +373,17 @@ body {
   animation: icon-pop 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* CharReveal — slide desde abajo por CSS (compositor thread): inmune a
+   stalls de rAF y a métricas de fuente variables. El translateY se expresa
+   en % del propio elemento y 120% garantiza salir de la máscara (1.15em). */
+@keyframes char-reveal {
+  from { transform: translateY(120%); }
+  to { transform: translateY(0); }
+}
+.animate-char-reveal {
+  animation: char-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* ============================================================
    VIEW TRANSITIONS — cambio de tema
    ============================================================ */
@@ -405,7 +416,8 @@ body {
   .animate-blink,
   .animate-bounce-slow,
   .animate-spin-slow,
-  .animate-icon-pop {
+  .animate-icon-pop,
+  .animate-char-reveal {
     animation: none !important;
   }
   ::view-transition-old(root),
