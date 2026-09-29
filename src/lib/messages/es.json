@@ -1,0 +1,445 @@
+{
+  "meta": {
+    "title": "MJ Torres — Webs profesionales por suscripción",
+    "description": "Webs profesionales por suscripción desde $25/mes. Diseño, desarrollo y mantenimiento incluidos. Sin pagar miles de dólares de golpe.",
+    "skip": "Saltar al contenido"
+  },
+  "preloader": {
+    "boot": [
+      "> npm create portfolio@mj",
+      "> instalando módulos... ok",
+      "> cargando fuentes — Space Grotesk [ok]",
+      "> publicando 1 web de cliente [ok]",
+      "> arrancando estudio de webs",
+      "> listo en 0.4s"
+    ],
+    "progress": "compilando experiencia"
+  },
+  "nav": {
+    "aria": "Principal",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "localeLabel": "Cambiar idioma",
+    "links": [
+      {
+        "label": "Inicio",
+        "href": "#inicio"
+      },
+      {
+        "label": "Trabajos",
+        "href": "#trabajos"
+      },
+      {
+        "label": "Planes",
+        "href": "#planes"
+      },
+      {
+        "label": "Preguntas",
+        "href": "#faq"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contacto"
+      }
+    ],
+    "cta": "hablemos",
+    "ctaWhatsapp": "pedir mi web",
+    "contextServices": "Webs por suscripción",
+    "contextPortfolio": "Portafolio",
+    "whatsappMsg": "Hola MJ, quiero una web para mi negocio."
+  },
+  "hero": {
+    "badge": "Cupos abiertos este mes",
+    "line1": "Tu negocio merece",
+    "line2a": "una web que",
+    "line2b": "vende.",
+    "sub": "Webs profesionales por suscripción desde",
+    "subPrice": "$25/mes",
+    "subIn": "— sin pagar miles de dólares de golpe.",
+    "cta1": "ver planes",
+    "cta2": "ver trabajos",
+    "stats": [
+      {
+        "label": "Cliente feliz",
+        "value": 1,
+        "prefix": "",
+        "suffix": ""
+      },
+      {
+        "label": "Desde, al mes",
+        "value": 25,
+        "prefix": "$",
+        "suffix": ""
+      },
+      {
+        "label": "Días y tu web sale al aire",
+        "value": 7,
+        "prefix": "",
+        "suffix": ""
+      }
+    ],
+    "location": "Panamá · disponible para proyectos",
+    "scroll": "cómo funciona",
+    "note": "webs por suscripción"
+  },
+  "marquee": {
+    "a": [
+      "Emprendedores",
+      "Tiendas online",
+      "Negocios en Instagram",
+      "Restaurantes",
+      "Profesionales",
+      "Cafeterías",
+      "Estudios & Gimnasios",
+      "Belleza & SPA"
+    ],
+    "b": [
+      "Tu web en tiempo récord",
+      "Sin saber nada de código",
+      "Cancelas cuando quieras",
+      "Diseño hecho a tu medida"
+    ]
+  },
+  "work": {
+    "index": "01",
+    "label": "trabajos",
+    "title": "Una web que ya está vendiendo.",
+    "subtitle": "Un proyecto real de cliente, en producción y trabajando todos los días.",
+    "badge": "completada",
+    "modal": {
+      "close": "Cerrar detalles",
+      "overview": "El proyecto",
+      "stack": "Stack",
+      "languages": "Idiomas",
+      "pages": "Páginas",
+      "visit": "visitar sitio",
+      "hint": "ESC para cerrar · clic fuera para salir",
+      "openDetails": "Ver caso de estudio"
+    },
+    "projects": [
+      {
+        "category": "Agencia de viajes",
+        "name": "Blue Horizon",
+        "url": "https://bluehorizonpty.com/",
+        "tech": "SvelteKit · Svelte 5",
+        "plan": "Plan Pro",
+        "gradient": "from-sky-400/25 via-bg to-bg",
+        "image": "/bluehorizonweb.avif",
+        "tagline": "Panamá, más que un canal.",
+        "description": "Sitio web de Blue Horizon PTY: vende Panamá como destino —playas, selvas, cultura, música y gastronomía— sin presión de paquetes. City tours, comunidad Emberá, Canal, reseñas reales de viajeros y galería de fotos compartidas.",
+        "stack": [
+          "SvelteKit 2 + Svelte 5 (runes) + TypeScript",
+          "Tailwind CSS v4 + paleta Apple",
+          "Paraglide JS (i18n)",
+          "Supabase (Postgres + RLS)",
+          "Resend (correos)",
+          "sharp (AVIF)",
+          "GSAP + transiciones Svelte",
+          "svelte-check · ESLint · Prettier · Vitest · Playwright",
+          "adapter-node (build Node, sin Docker)"
+        ],
+        "languages": [
+          "Español",
+          "English",
+          "Français",
+          "Português"
+        ],
+        "measurement": {
+          "label": "Medición · Optimización GEO",
+          "title": "Lista para buscadores de IA (GEO / Agent-Ready)",
+          "score": "63/100",
+          "level": "Nivel 4 · Agent-Integrated",
+          "image": "/is-your-site-agent-ready.avif",
+          "imageAlt": "Auditoría Is It Agent Ready de Blue Horizon con 63/100, Nivel 4 Agent-Integrated",
+          "intro": "En este proyecto no solo cuidé la experiencia visual y la velocidad de carga para humanos, sino también cómo los agentes de IA y buscadores conversacionales (ChatGPT, Perplexity o Claude) interpretan la web. El sitio obtuvo 63/100 (Nivel 4: Agent-Integrated) en la auditoría técnica de Is It Agent Ready.",
+          "whyTitle": "¿Por qué no un 100%?",
+          "whyText": "Porque la arquitectura debe responder al propósito del negocio, no a llenar casillas. Blue Horizon es un sitio informativo y comercial para una agencia de tours, no una plataforma con backend de agentes autónomos. La auditoría descuenta puntos por la ausencia de servidores MCP, OAuth para bots, transacciones A2A o comercio máquina-a-máquina — implementarlos aquí sería complejidad y sobrecarga sin sentido.",
+          "readyTitle": "Lo que sí está listo · capa agente al 100%",
+          "readyItems": [
+            "Rastreo claro para bots de IA",
+            "Indexabilidad semántica",
+            "Estructura de contenido limpia",
+            "Reglas claras de acceso"
+          ],
+          "outro": "Esto garantiza que cuando alguien pregunte a un asistente de IA por tours o experiencias en Panamá, el modelo pueda encontrar, leer y citar a Blue Horizon sin errores ni alucinaciones.",
+          "sourceLabel": "isitagentready.com",
+          "sourceUrl": "https://isitagentready.com/",
+          "pagespeed": {
+            "label": "Rendimiento · PageSpeed Insights",
+            "title": "Velocidad y calidad medidas en producción",
+            "url": "https://bluehorizonpty.com/en",
+            "note": "Auditoría sobre la URL en producción. En ordenador el rendimiento llega a 97 con SEO y buenas prácticas en 100; en móvil baja a 66 —lo normal por red y CPU limitadas— manteniendo accesibilidad en 93 y SEO en 100.",
+            "desktop": {
+              "title": "Ordenador",
+              "image": "/PageSpeedInsights_Ordenador.avif",
+              "imageAlt": "PageSpeed Insights en ordenador: rendimiento 97, accesibilidad 96, prácticas 100, SEO 100",
+              "scores": [
+                { "label": "Rendimiento", "value": "97" },
+                { "label": "Accesibilidad", "value": "96" },
+                { "label": "Prácticas", "value": "100" },
+                { "label": "SEO", "value": "100" },
+                { "label": "Navegación agéntica", "value": "3/3" }
+              ]
+            },
+            "mobile": {
+              "title": "Móvil",
+              "image": "/PageSpeedInsights_Celular.avif",
+              "imageAlt": "PageSpeed Insights en móvil: rendimiento 66, accesibilidad 93, prácticas 100, SEO 100",
+              "scores": [
+                { "label": "Rendimiento", "value": "66" },
+                { "label": "Accesibilidad", "value": "93" },
+                { "label": "Prácticas", "value": "100" },
+                { "label": "SEO", "value": "100" },
+                { "label": "Navegación agéntica", "value": "3/3" }
+              ]
+            }
+          }
+        },
+        "pages": [
+          {
+            "title": "Home",
+            "text": "Hero cinemático, manifiesto sticky, carrusel de destinos, showcase, cultura y gastronomía, tours, blog, reseñas destacadas reales desde la BD y CTA final."
+          },
+          {
+            "title": "/destinos",
+            "text": "Recorrido por la ciudad en 7 paradas con fotos y descripciones extensas + fichas por destino."
+          },
+          {
+            "title": "/destinos/[slug]",
+            "text": "Ficha con galería, highlights, tours relacionados, experiencias, FAQ con schema FAQPage y comentarios."
+          },
+          {
+            "title": "/tours",
+            "text": "Hero estilo folleto + 2 paquetes (City Tour, Emberá) con itinerario por horas e incluye / no incluye."
+          },
+          {
+            "title": "/cultura",
+            "text": "Pollera, tamborito, diablitos, congos, carnaval, gastronomía y 7 pueblos originarios."
+          },
+          {
+            "title": "/galeria",
+            "text": "Mosaico de fotos de turistas con autodetección de static/Galeria/ + lightbox con flechas."
+          },
+          {
+            "title": "/resenas",
+            "text": "Agregado con barras, cards con logo de plataforma, formulario con foto y barra de progreso."
+          },
+          {
+            "title": "/contacto",
+            "text": "Formulario de contacto con validación, envío por Resend y confirmación inmediata."
+          }
+        ]
+      }
+    ],
+    "cta": "quiero la mía",
+    "ctaMsg": "Hola MJ, quiero una web para mi negocio. Vi tu proyecto y me encantó."
+  },
+  "seogeo": {
+    "index": "02",
+    "label": "seo + geo",
+    "title": "Tu web, lista para Google y para la IA.",
+    "subtitle": "Tus clientes ya no solo buscan en Google: le preguntan a ChatGPT, Gemini o Claude. Si tu negocio no aparece ahí, para ellos no existe.",
+    "pain": "¿De qué sirve una web bonita si nadie la encuentra?",
+    "cards": [
+      {
+        "tag": "SEO",
+        "title": "Buscadores clásicos",
+        "text": "Tu web aparece en Google y Bing cuando te buscan.",
+        "items": [
+          "Títulos y descripciones que invitan al clic",
+          "Velocidad que Google premia",
+          "Mapa del sitio y datos estructurados"
+        ]
+      },
+      {
+        "tag": "GEO · la nueva era",
+        "title": "Buscadores con IA",
+        "text": "ChatGPT, Gemini y Claude recomiendan tu negocio sin inventar datos.",
+        "items": [
+          "Contenido claro, fácil de citar",
+          "Estructura que los modelos entienden",
+          "Acceso abierto a los bots de IA"
+        ]
+      }
+    ],
+    "proof": {
+      "label": "Probado en producción, no en promesas",
+      "stats": [
+        { "value": "97", "label": "PageSpeed en ordenador" },
+        { "value": "100", "label": "SEO" },
+        { "value": "63/100", "label": "Agent-Ready · Nivel 4" }
+      ],
+      "note": "Números reales de Blue Horizon, mi proyecto en producción. Tu web sale con la misma base."
+    },
+    "cta": "quiero mi web optimizada",
+    "ctaMsg": "Hola MJ, quiero una web optimizada para Google y para la IA. ¿Hablamos?"
+  },
+  "plans": {
+    "index": "03",
+    "label": "planes",
+    "title": "Elige el plan que crece contigo.",
+    "subtitle": "Precios claros, mensuales y sin sorpresas.",
+    "featured": "★ más elegido",
+    "per": "/mes",
+    "note": "El dominio, el logo y la identidad de marca se cobran aparte. Cancelación disponible después de 6 meses.",
+    "cta": "elegir",
+    "ctaMsg": "Hola MJ, me interesa el Plan {plan} de ${price}. ¿Podemos hablar?",
+    "items": [
+      {
+        "name": "Starter",
+        "price": 25,
+        "tagline": "Para empezar a existir online",
+        "features": [
+          "Landing básica de 1 sección",
+          "Diseño adaptado a móvil",
+          "Botón directo a WhatsApp",
+          "Mantenimiento incluido"
+        ],
+        "featured": false
+      },
+      {
+        "name": "Pro",
+        "price": 45,
+        "tagline": "La favorita de los negocios",
+        "features": [
+          "Web de hasta 5 secciones",
+          "Todo lo de Starter",
+          "Galería y formularios",
+          "Optimización para Google",
+          "Cambios mensuales incluidos"
+        ],
+        "featured": true
+      },
+      {
+        "name": "Business",
+        "price": 75,
+        "tagline": "Para vender en grande",
+        "features": [
+          "Web completa + blog",
+          "Tienda básica online",
+          "Todo lo de Pro",
+          "Soporte prioritario"
+        ],
+        "featured": false
+      }
+    ]
+  },
+  "why": {
+    "index": "04",
+    "label": "por qué conmigo",
+    "title": "Simple, honesto y hecho para ti.",
+    "subtitle": "Dejé de ser un desarrollador más para ser tu aliado: sin humo, sin jerga técnica.",
+    "items": [
+      {
+        "title": "Sin conocimientos técnicos",
+        "text": "Yo me encargo de todo: diseño, textos, imágenes y publicación. Tú solo me cuentas tu idea."
+      },
+      {
+        "title": "Sin compromisos eternos",
+        "text": "Puedes cancelar después de 6 meses. Sin ataduras ni contratos imposibles de romper."
+      },
+      {
+        "title": "Transparencia total",
+        "text": "Sin letras pequeñas ni sorpresas. Sabes exactamente qué pagas y qué recibes."
+      }
+    ]
+  },
+  "steps": {
+    "index": "05",
+    "label": "cómo funciona",
+    "title": "De tu idea a tu web en 4 pasos.",
+    "subtitle": "Sin formularios eternos ni llamadas agendadas: directo al punto.",
+    "items": [
+      {
+        "number": "01",
+        "icon": "chat",
+        "title": "Me escribes tu idea",
+        "text": "Me cuentas qué vendes y a quién. Sin formularios eternos."
+      },
+      {
+        "number": "02",
+        "icon": "palette",
+        "title": "Diseño tu web",
+        "text": "Creo una web a tu medida, moderna y lista para vender."
+      },
+      {
+        "number": "03",
+        "icon": "rocket",
+        "title": "Tu web sale al aire",
+        "text": "Publico todo y tu negocio ya está online para el mundo."
+      },
+      {
+        "number": "04",
+        "icon": "wrench",
+        "title": "Yo mantengo todo",
+        "text": "Tú te enfocas en vender; yo cuido que todo funcione."
+      }
+    ]
+  },
+  "about": {
+    "index": "06",
+    "label": "sobre el proyecto",
+    "title": "Más que una web, una oportunidad.",
+    "textA": "Este proyecto nació de entender que tener presencia web",
+    "highlight": "no debería ser un lujo.",
+    "textB": "Soy MJ Torres, y mi misión es llevar a pequeños negocios al mundo entero sin que tengan que gastar una fortuna.",
+    "missionLabel": "la misión"
+  },
+  "faq": {
+    "index": "07",
+    "label": "preguntas frecuentes",
+    "title": "¿Tienes dudas? Te las resuelvo.",
+    "subtitle": "Y si queda alguna, me escribes y te respondo yo mismo.",
+    "items": [
+      {
+        "q": "¿Qué pasa si cancelo?",
+        "a": "Puedes cancelar después de 6 meses sin penalización. Tu web deja de estar activa al terminar el mes pagado."
+      },
+      {
+        "q": "¿El dominio es mío?",
+        "a": "Sí. El dominio se registra a tu nombre y siempre te pertenece. Se cobra aparte de la suscripción."
+      },
+      {
+        "q": "¿Puedo cambiar de plan?",
+        "a": "Claro. Puedes subir o bajar de plan cuando quieras; ajustamos tu web y tu cobro mensual sin complicaciones."
+      },
+      {
+        "q": "¿Qué necesito para empezar?",
+        "a": "Solo tus ganas y una idea de lo que vendes. Yo me encargo del resto: textos, diseño e imágenes."
+      },
+      {
+        "q": "¿Usan WordPress?",
+          "a": "Uso la tecnología ideal para cada caso: SvelteKit a medida, WordPress o Shopify, según las necesidades de tu negocio. Yo me encargo de todo: instalación, diseño, mantenimiento y soporte."
+      }
+    ]
+  },
+  "cta": {
+    "titleA": "¿Listo para llevar tu negocio",
+    "titleB": "al siguiente nivel?",
+    "sub": "Escríbeme hoy y en pocos días tu negocio tendrá la web que merece.",
+    "whatsapp": "hablar por whatsapp",
+    "mail": "enviar correo",
+    "note": "respuestas rápidas, sin compromiso",
+    "whatsappMsg": "Hola MJ, quiero que mi negocio tenga su web. ¿Cómo empezamos?",
+      "seo": "Tener una web no debería ser un lujo ni una deuda. Por eso la ofrezco por suscripción: diseño, desarrollo, dominio y mantenimiento sin pagar miles de dólares de golpe. 1 web de cliente ya publicada y más en camino."
+  },
+  "cookie": {
+    "title": "Privacidad y cookies",
+    "text": "Uso Google Analytics, Google Tag Manager y el píxel de Meta para medir visitas y mejorar el sitio. Al aceptar, guardo una cookie en tu navegador con tu decisión.",
+    "accept": "Aceptar y continuar",
+    "decline": "Rechazar"
+  },
+  "footer": {
+    "credit": "webs por suscripción",
+    "backTop": "volver arriba",
+    "made": "Hecho con SvelteKit — sin plantillas."
+  },
+  "services": {
+    "hero": {
+      "badge": "Cupos abiertos este mes",
+      "line1": "Tu negocio merece",
+      "line2a": "una web que",
+      "line2b": "vende."
+    }
+  }
+}

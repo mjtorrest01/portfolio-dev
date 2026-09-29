@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "title": "MJ Torres — Professional websites by subscription",
+    "description": "Professional websites by subscription from $25/mo. Design, development and maintenance included. No upfront thousands of dollars.",
+    "skip": "Skip to content"
+  },
+  "preloader": {
+    "boot": [
+      "> npm create portfolio@mj",
+      "> installing modules... ok",
+      "> loading fonts — Space Grotesk [ok]",
+      "> shipping 1 client website [ok]",
+      "> starting web studio",
+      "> ready in 0.4s"
+    ],
+    "progress": "compiling experience"
+  },
+  "nav": {
+    "aria": "Main",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "localeLabel": "Change language",
+    "links": [
+      {
+        "label": "Home",
+        "href": "#inicio"
+      },
+      {
+        "label": "Work",
+        "href": "#trabajos"
+      },
+      {
+        "label": "Plans",
+        "href": "#planes"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      },
+      {
+        "label": "Contact",
+        "href": "#contacto"
+      }
+    ],
+    "cta": "let's talk",
+    "ctaWhatsapp": "get my website",
+    "contextServices": "Subscription websites",
+    "contextPortfolio": "Portfolio",
+    "whatsappMsg": "Hi MJ, I want a website for my business."
+  },
+  "hero": {
+    "badge": "Spots open this month",
+    "line1": "Your business deserves",
+    "line2a": "a website that",
+    "line2b": "sells.",
+    "sub": "Professional websites by subscription from",
+    "subPrice": "$25/month",
+    "subIn": "— without paying thousands upfront.",
+    "cta1": "view plans",
+    "cta2": "view work",
+    "stats": [
+      {
+        "label": "Happy client",
+        "value": 1,
+        "prefix": "",
+        "suffix": ""
+      },
+      {
+        "label": "From, per month",
+        "value": 25,
+        "prefix": "$",
+        "suffix": ""
+      },
+      {
+        "label": "Days to go live",
+        "value": 7,
+        "prefix": "",
+        "suffix": ""
+      }
+    ],
+    "location": "Panama · available for projects",
+    "scroll": "how it works",
+    "note": "subscription websites"
+  },
+  "marquee": {
+    "a": [
+      "Entrepreneurs",
+      "Online stores",
+      "Instagram businesses",
+      "Restaurants",
+      "Professionals",
+      "Coffee shops",
+      "Studios & Gyms",
+      "Beauty & SPA"
+    ],
+    "b": [
+      "Your website in record time",
+      "No technical skills needed",
+      "Cancel whenever you want",
+      "Design made for you"
+    ]
+  },
+  "work": {
+    "index": "01",
+    "label": "work",
+    "title": "A website that's already selling.",
+    "subtitle": "A real client project, live in production and working every day.",
+    "badge": "completed",
+    "modal": {
+      "close": "Close details",
+      "overview": "The project",
+      "stack": "Stack",
+      "languages": "Languages",
+      "pages": "Pages",
+      "visit": "visit site",
+      "hint": "ESC to close · click outside to exit",
+      "openDetails": "View case study"
+    },
+    "projects": [
+      {
+        "category": "Travel agency",
+        "name": "Blue Horizon",
+        "url": "https://bluehorizonpty.com/",
+        "tech": "SvelteKit · Svelte 5",
+        "plan": "Pro Plan",
+        "gradient": "from-sky-400/25 via-bg to-bg",
+        "image": "/bluehorizonweb.avif",
+        "tagline": "Panama, more than a canal.",
+        "description": "Blue Horizon PTY website: sells Panama as a destination —beaches, rainforests, culture, music and food— with zero package pressure. City tours, Emberá community, Canal, real traveler reviews and a shared photo gallery.",
+        "stack": [
+          "SvelteKit 2 + Svelte 5 (runes) + TypeScript",
+          "Tailwind CSS v4 + Apple palette",
+          "Paraglide JS (i18n)",
+          "Supabase (Postgres + RLS)",
+          "Resend (emails)",
+          "sharp (AVIF)",
+          "GSAP + Svelte transitions",
+          "svelte-check · ESLint · Prettier · Vitest · Playwright",
+          "adapter-node (Node build, no Docker)"
+        ],
+        "languages": ["Spanish", "English", "French", "Portuguese"],
+        "measurement": {
+          "label": "Measurement · GEO optimization",
+          "title": "Ready for AI search (GEO / Agent-Ready)",
+          "score": "63/100",
+          "level": "Level 4 · Agent-Integrated",
+          "image": "/is-your-site-agent-ready.avif",
+          "imageAlt": "Is It Agent Ready audit of Blue Horizon scoring 63/100, Level 4 Agent-Integrated",
+          "intro": "On this project I didn't only care about the visual experience and load speed for humans, but also about how AI agents and conversational search engines (ChatGPT, Perplexity or Claude) interpret the web. The site scored 63/100 (Level 4: Agent-Integrated) in the Is It Agent Ready technical audit.",
+          "whyTitle": "Why not 100%?",
+          "whyText": "Because architecture should serve the business purpose, not checkbox-filling. Blue Horizon is an informational, commercial site for a tour agency — not a platform with an autonomous-agent backend. The audit deducts points for missing MCP servers, OAuth for bots, A2A transactions or machine-to-machine commerce — adding them here would be pointless complexity and overhead.",
+          "readyTitle": "What's ready · 100% agent-accessible layer",
+          "readyItems": [
+            "Clear crawling for AI bots",
+            "Semantic indexability",
+            "Clean content structure",
+            "Clear access rules"
+          ],
+          "outro": "This ensures that when someone asks an AI assistant about tours or experiences in Panama, the model can find, read and cite Blue Horizon without errors or hallucinations.",
+          "sourceLabel": "isitagentready.com",
+          "sourceUrl": "https://isitagentready.com/",
+          "pagespeed": {
+            "label": "Performance · PageSpeed Insights",
+            "title": "Speed and quality measured in production",
+            "url": "https://bluehorizonpty.com/en",
+            "note": "Audit on the live production URL. On desktop performance hits 97 with SEO and best practices at 100; on mobile it drops to 66 — expected on throttled network/CPU — while keeping accessibility at 93 and SEO at 100.",
+            "desktop": {
+              "title": "Desktop",
+              "image": "/PageSpeedInsights_Ordenador.avif",
+              "imageAlt": "PageSpeed Insights on desktop: performance 97, accessibility 96, best practices 100, SEO 100",
+              "scores": [
+                { "label": "Performance", "value": "97" },
+                { "label": "Accessibility", "value": "96" },
+                { "label": "Best practices", "value": "100" },
+                { "label": "SEO", "value": "100" },
+                { "label": "Agentic navigation", "value": "3/3" }
+              ]
+            },
+            "mobile": {
+              "title": "Mobile",
+              "image": "/PageSpeedInsights_Celular.avif",
+              "imageAlt": "PageSpeed Insights on mobile: performance 66, accessibility 93, best practices 100, SEO 100",
+              "scores": [
+                { "label": "Performance", "value": "66" },
+                { "label": "Accessibility", "value": "93" },
+                { "label": "Best practices", "value": "100" },
+                { "label": "SEO", "value": "100" },
+                { "label": "Agentic navigation", "value": "3/3" }
+              ]
+            }
+          }
+        },
+        "pages": [
+          {
+            "title": "Home",
+            "text": "Cinematic hero, sticky manifesto, destinations carousel, showcase, culture & food, tours, blog, featured real reviews from the DB and final CTA."
+          },
+          {
+            "title": "/destinations",
+            "text": "City route in 7 stops with photos and long descriptions + per-destination sheets."
+          },
+          {
+            "title": "/destinations/[slug]",
+            "text": "Sheet with gallery, highlights, related tours, experiences, FAQ with FAQPage schema and comments."
+          },
+          {
+            "title": "/tours",
+            "text": "Brochure-style hero + 2 packages (City Tour, Emberá) with hour-by-hour itinerary and includes / excludes."
+          },
+          {
+            "title": "/culture",
+            "text": "Pollera, tamborito, diablitos, congos, carnival, gastronomy and 7 indigenous peoples."
+          },
+          {
+            "title": "/gallery",
+            "text": "Tourist photo mosaic with auto-detection from static/Galeria/ + lightbox with arrows."
+          },
+          {
+            "title": "/reviews",
+            "text": "Aggregate with bars, platform-logo cards, photo form with progress bar."
+          },
+          {
+            "title": "/contact",
+            "text": "Contact form with validation, Resend delivery and instant confirmation."
+          }
+        ]
+      }
+    ],
+    "cta": "I want one",
+    "ctaMsg": "Hi MJ, I want a website for my business. I saw your project and I loved it."
+  },
+  "seogeo": {
+    "index": "02",
+    "label": "seo + geo",
+    "title": "Your site, ready for Google and AI.",
+    "subtitle": "Your customers don't just search on Google anymore — they ask ChatGPT, Gemini or Claude. If your business doesn't show up there, it doesn't exist for them.",
+    "pain": "What good is a beautiful website nobody finds?",
+    "cards": [
+      {
+        "tag": "SEO",
+        "title": "Classic search",
+        "text": "Your site shows up on Google and Bing when people look for you.",
+        "items": [
+          "Titles and descriptions that earn the click",
+          "Speed that Google rewards",
+          "Sitemap and structured data"
+        ]
+      },
+      {
+        "tag": "GEO · the new era",
+        "title": "AI search",
+        "text": "ChatGPT, Gemini and Claude recommend your business without making things up.",
+        "items": [
+          "Clear, easy-to-cite content",
+          "Structure that models understand",
+          "Open access for AI bots"
+        ]
+      }
+    ],
+    "proof": {
+      "label": "Proven in production, not in promises",
+      "stats": [
+        { "value": "97", "label": "Desktop PageSpeed" },
+        { "value": "100", "label": "SEO" },
+        { "value": "63/100", "label": "Agent-Ready · Level 4" }
+      ],
+      "note": "Real numbers from Blue Horizon, my live project. Your site ships on the same foundation."
+    },
+    "cta": "i want my optimized site",
+    "ctaMsg": "Hi MJ, I want a website optimized for Google and AI. Can we talk?"
+  },
+  "plans": {
+    "index": "03",
+    "label": "plans",
+    "title": "Pick the plan that grows with you.",
+    "subtitle": "Clear monthly pricing, no surprises.",
+    "featured": "★ most chosen",
+    "per": "/mo",
+    "note": "Domain, logo and brand identity are billed separately. Cancellation available after 6 months.",
+    "cta": "choose",
+    "ctaMsg": "Hi MJ, I'm interested in the {plan} Plan at ${price}. Can we talk?",
+    "items": [
+      {
+        "name": "Starter",
+        "price": 25,
+        "tagline": "To start existing online",
+        "features": [
+          "Basic 1-section landing",
+          "Mobile-adapted design",
+          "Direct WhatsApp button",
+          "Maintenance included"
+        ],
+        "featured": false
+      },
+      {
+        "name": "Pro",
+        "price": 45,
+        "tagline": "The businesses' favorite",
+        "features": [
+          "Website up to 5 sections",
+          "Everything in Starter",
+          "Gallery and forms",
+          "Google optimization",
+          "Monthly changes included"
+        ],
+        "featured": true
+      },
+      {
+        "name": "Business",
+        "price": 75,
+        "tagline": "To sell big",
+        "features": [
+          "Full website + blog",
+          "Basic online store",
+          "Everything in Pro",
+          "Priority support"
+        ],
+        "featured": false
+      }
+    ]
+  },
+  "why": {
+    "index": "04",
+    "label": "why me",
+    "title": "Simple, honest and made for you.",
+    "subtitle": "I stopped being just another developer to become your partner: no smoke, no jargon.",
+    "items": [
+      {
+        "title": "No technical knowledge needed",
+        "text": "I take care of everything: design, copy, images and publishing. You just tell me your idea."
+      },
+      {
+        "title": "No endless commitments",
+        "text": "You can cancel after 6 months. No ties or contracts that are impossible to break."
+      },
+      {
+        "title": "Total transparency",
+        "text": "No fine print or surprises. You know exactly what you pay and what you get."
+      }
+    ]
+  },
+  "steps": {
+    "index": "05",
+    "label": "how it works",
+    "title": "From your idea to your website in 4 steps.",
+    "subtitle": "No endless forms or scheduled calls: straight to the point.",
+    "items": [
+      {
+        "number": "01",
+        "icon": "chat",
+        "title": "You text me your idea",
+        "text": "You tell me what you sell and who for. No endless forms."
+      },
+      {
+        "number": "02",
+        "icon": "palette",
+        "title": "I design your website",
+        "text": "I create a custom, modern website ready to sell."
+      },
+      {
+        "number": "03",
+        "icon": "rocket",
+        "title": "Your website goes live",
+        "text": "I publish everything and your business is online for the world."
+      },
+      {
+        "number": "04",
+        "icon": "wrench",
+        "title": "I maintain everything",
+        "text": "You focus on selling; I make sure everything keeps working."
+      }
+    ]
+  },
+  "about": {
+    "index": "06",
+    "label": "about the project",
+    "title": "More than a website, an opportunity.",
+    "textA": "This project was born from understanding that having a web presence",
+    "highlight": "shouldn't be a luxury.",
+    "textB": "I'm MJ Torres, and my mission is to take small businesses to the whole world without them having to spend a fortune.",
+    "missionLabel": "the mission"
+  },
+  "faq": {
+    "index": "07",
+    "label": "frequently asked questions",
+    "title": "Have questions? I'll answer them.",
+    "subtitle": "And if something remains, just write me and I'll reply myself.",
+    "items": [
+      {
+        "q": "What happens if I cancel?",
+        "a": "You can cancel after 6 months with no penalty. Your website goes offline at the end of the paid month."
+      },
+      {
+        "q": "Is the domain mine?",
+        "a": "Yes. The domain is registered in your name and always belongs to you. It's billed separately from the subscription."
+      },
+      {
+        "q": "Can I change plans?",
+        "a": "Of course. You can upgrade or downgrade whenever you want; we adjust your website and your monthly fee without complications."
+      },
+      {
+        "q": "What do I need to get started?",
+        "a": "Just your motivation and an idea of what you sell. I take care of the rest: copy, design and images."
+      },
+      {
+        "q": "Do you use WordPress?",
+        "a": "I use the ideal technology for each case: custom SvelteKit, WordPress or Shopify, depending on your business needs. I handle everything: setup, design, maintenance and support."
+      }
+    ]
+  },
+  "cta": {
+    "titleA": "Ready to take your business",
+    "titleB": "to the next level?",
+    "sub": "Write me today and in a few days your business will have the website it deserves.",
+    "whatsapp": "chat on whatsapp",
+    "mail": "send email",
+    "note": "quick replies, no commitment",
+    "whatsappMsg": "Hi MJ, I want my business to have its website. How do we start?",
+      "seo": "Having a website shouldn't be a luxury or a debt. That's why I offer it by subscription: design, development, domain and maintenance without paying thousands upfront. 1 client website already live and more on the way."
+  },
+  "cookie": {
+    "title": "Privacy & cookies",
+    "text": "I use Google Analytics, Google Tag Manager and the Meta pixel to measure visits and improve the site. By accepting, I save a cookie in your browser with your decision.",
+    "accept": "Accept & continue",
+    "decline": "Decline"
+  },
+  "footer": {
+    "credit": "subscription websites",
+    "backTop": "back to top",
+    "made": "Built with SvelteKit — no templates."
+  },
+  "services": {
+    "hero": {
+      "badge": "Spots open this month",
+      "line1": "Your business deserves",
+      "line2a": "a website that",
+      "line2b": "sells."
+    }
+  }
+}

@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS — dual theme (dark / light)
+   Raw values live in --t-* variables; @theme maps semantic names.
+   Theme delivered via Svelte theme store: default = system preference.
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+  /* ---------- Light (default fallback) ---------- */
+  --t-void: 210 25% 93%;
+  --t-bg: 210 20% 98%;
+  --t-surface: 0 0% 100%;
+  --t-surface-2: 210 20% 95%;
+  --t-line: 214 32% 84%;
+  --t-line-bright: 215 16% 65%;
+  --t-fg: 222 47% 11%;
+  --t-fg-dim: 215 25% 27%;
+  --t-muted: 215 20% 45%;
+  --t-faint: 215 14% 55%;
+  --t-accent: 142 76% 36%;
+  --t-accent-soft: 142 71% 45%;
+  --t-accent-deep: 142 84% 25%;
+  --t-mint: 160 84% 34%;
+  --t-cyan: 189 94% 35%;
+  --t-warn: 38 92% 45%;
+  --t-danger: 0 72% 51%;
+  --t-shade: 222 47% 11%;
+  --t-on-accent: 0 0% 100%;
+  --t-glow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    /* ---------- Dark (system preference) ---------- */
+    --t-void: 227 51% 7%;
+    --t-bg: 222 47% 11%;
+    --t-surface: 217 33% 17%;
+    --t-surface-2: 225 43% 16%;
+    --t-line: 215 25% 27%;
+    --t-line-bright: 215 20% 35%;
+    --t-fg: 210 40% 98%;
+    --t-fg-dim: 210 40% 93%;
+    --t-muted: 215 16% 65%;
+    --t-faint: 215 16% 40%;
+    --t-accent: 142 71% 45%;
+    --t-accent-soft: 142 71% 54%;
+    --t-accent-deep: 142 76% 36%;
+    --t-mint: 160 84% 39%;
+    --t-cyan: 189 94% 43%;
+    --t-warn: 45 93% 47%;
+    --t-danger: 0 84% 60%;
+    --t-shade: 227 51% 4%;
+    --t-on-accent: 222 47% 11%;
+    --t-glow: 1;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --t-void: 227 51% 7%;
+  --t-bg: 222 47% 11%;
+  --t-surface: 217 33% 17%;
+  --t-surface-2: 225 43% 16%;
+  --t-line: 215 25% 27%;
+  --t-line-bright: 215 20% 35%;
+  --t-fg: 210 40% 98%;
+  --t-fg-dim: 210 40% 93%;
+  --t-muted: 215 16% 65%;
+  --t-faint: 215 16% 40%;
+  --t-accent: 142 71% 45%;
+  --t-accent-soft: 142 71% 54%;
+  --t-accent-deep: 142 76% 36%;
+  --t-mint: 160 84% 39%;
+  --t-cyan: 189 94% 43%;
+  --t-warn: 45 93% 47%;
+  --t-danger: 0 84% 60%;
+  --t-shade: 227 51% 4%;
+  --t-on-accent: 222 47% 11%;
+  --t-glow: 1;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --t-void: 210 25% 93%;
+  --t-bg: 210 20% 98%;
+  --t-surface: 0 0% 100%;
+  --t-surface-2: 210 20% 95%;
+  --t-line: 214 32% 84%;
+  --t-line-bright: 215 16% 65%;
+  --t-fg: 222 47% 11%;
+  --t-fg-dim: 215 25% 27%;
+  --t-muted: 215 20% 45%;
+  --t-faint: 215 14% 55%;
+  --t-accent: 142 76% 36%;
+  --t-accent-soft: 142 71% 45%;
+  --t-accent-deep: 142 84% 25%;
+  --t-mint: 160 84% 34%;
+  --t-cyan: 189 94% 35%;
+  --t-warn: 38 92% 45%;
+  --t-danger: 0 72% 51%;
+  --t-shade: 222 47% 11%;
+  --t-on-accent: 0 0% 100%;
+  --t-glow: none;
+}
+
+/* ============================================================
+   SEMANTIC TOKENS → Tailwind utilities
+   ============================================================ */
+
+@theme {
+  --color-void: hsl(var(--t-void));
+  --color-bg: hsl(var(--t-bg));
+  --color-surface: hsl(var(--t-surface));
+  --color-surface-2: hsl(var(--t-surface-2));
+  --color-line: hsl(var(--t-line));
+  --color-line-bright: hsl(var(--t-line-bright));
+  --color-fg: hsl(var(--t-fg));
+  --color-fg-dim: hsl(var(--t-fg-dim));
+  --color-muted: hsl(var(--t-muted));
+  --color-faint: hsl(var(--t-faint));
+  --color-accent: hsl(var(--t-accent));
+  --color-accent-soft: hsl(var(--t-accent-soft));
+  --color-accent-deep: hsl(var(--t-accent-deep));
+  --color-mint: hsl(var(--t-mint));
+  --color-cyan: hsl(var(--t-cyan));
+  --color-warn: hsl(var(--t-warn));
+  --color-danger: hsl(var(--t-danger));
+  --color-shade: hsl(var(--t-shade));
+  --color-on-accent: hsl(var(--t-on-accent));
+
+  --font-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  background-color: hsl(var(--t-bg));
+  color: hsl(var(--t-fg));
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: hsl(var(--t-accent));
+  color: hsl(var(--t-on-accent));
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 300;
+  transform: translateY(-200%);
+  border-radius: 8px;
+  background: hsl(var(--t-accent));
+  color: hsl(var(--t-on-accent));
+  padding: 12px 20px;
+  font: 700 14px var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--t-accent));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+[id] {
+  scroll-margin-top: 88px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--t-void));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--t-line-bright));
+  border-radius: 8px;
+  border: 2px solid hsl(var(--t-void));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--t-accent));
+}
+
+@media (pointer: fine) {
+  body.cursor-live,
+  body.cursor-live * {
+    cursor: none !important;
+  }
+}
+
+/* ============================================================
+   THEMED UTILITIES (Tailwind v4 @utility: habilitan variantes
+   hover:/focus:/lg: — p. ej. hover:shadow-hard-accent)
+   ============================================================ */
+
+/* Hard neo-brutalism offset shadows */
+@utility shadow-hard {
+  box-shadow: 5px 5px 0 0 hsl(var(--t-shade));
+}
+@utility shadow-hard-accent {
+  box-shadow: 6px 6px 0 0 hsl(var(--t-accent));
+}
+@utility shadow-hard-green {
+  box-shadow: 6px 6px 0 0 color-mix(in srgb, hsl(var(--t-accent)) 35%, transparent);
+}
+@utility shadow-hard-line {
+  box-shadow: 5px 5px 0 0 hsl(var(--t-line));
+}
+@utility shadow-hard-fg {
+  box-shadow: 6px 6px 0 0 hsl(var(--t-fg));
+}
+
+/* Neon glow — dark only */
+@utility glow-text {
+  text-shadow:
+    0 0 18px color-mix(in srgb, hsl(var(--t-accent)) 60%, transparent),
+    0 0 60px color-mix(in srgb, hsl(var(--t-accent)) 25%, transparent);
+}
+@utility glow-box {
+  box-shadow:
+    0 0 22px color-mix(in srgb, hsl(var(--t-accent)) 40%, transparent),
+    0 0 80px color-mix(in srgb, hsl(var(--t-accent)) 12%, transparent);
+}
+:root[data-theme="light"] .glow-text,
+:root[data-theme="light"] .glow-box {
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* Outlined ghost text */
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, hsl(var(--t-fg)) 24%, transparent);
+}
+@utility text-outline-green {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, hsl(var(--t-accent)) 55%, transparent);
+}
+
+/* Chart-like grid background */
+@utility bg-grid {
+  background-image:
+    linear-gradient(color-mix(in srgb, hsl(var(--t-line)) 22%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, hsl(var(--t-line)) 22%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.bg-grid-fade {
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Aurora blobs read softer on light theme */
+:root[data-theme="light"] .animate-aurora,
+:root[data-theme="light"] .animate-aurora-slow {
+  opacity: 0.5;
+}
+
+/* Film grain overlay */
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 32s) linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee var(--marquee-duration, 40s) linear infinite reverse;
+}
+.marquee-hover:hover .animate-marquee,
+.marquee-hover:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
+
+@keyframes aurora {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(60px, -40px) scale(1.18) rotate(10deg); }
+  66% { transform: translate(-40px, 30px) scale(0.92) rotate(-8deg); }
+}
+.animate-aurora {
+  animation: aurora 16s ease-in-out infinite;
+}
+.animate-aurora-slow {
+  animation: aurora 24s ease-in-out infinite reverse;
+}
+
+@keyframes blink-caret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes side-to-side {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+.animate-bounce-slow {
+  animation: side-to-side 1.8s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 9s linear infinite;
+}
+
+@keyframes icon-pop {
+  0% { transform: scale(0) rotate(-90deg); opacity: 0; }
+  60% { transform: scale(1.25) rotate(8deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+.animate-icon-pop {
+  animation: icon-pop 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* CharReveal — slide desde abajo por CSS (compositor thread): inmune a
+   stalls de rAF y a métricas de fuente variables. El translateY se expresa
+   en % del propio elemento y 120% garantiza salir de la máscara (1.15em). */
+@keyframes char-reveal {
+  from { transform: translateY(120%); }
+  to { transform: translateY(0); }
+}
+.animate-char-reveal {
+  animation: char-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Svelte reveal — reemplazo de framer-motion fadeUp/maskUp/scaleIn */
+@keyframes svelte-fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.svelte-reveal {
+  animation: svelte-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+/* ============================================================
+   VIEW TRANSITIONS — cambio de tema
+   ============================================================ */
+
+::view-transition-old(root) {
+  animation: vt-out 0.28s ease both;
+}
+::view-transition-new(root) {
+  animation: vt-in 0.45s ease both;
+}
+
+@keyframes vt-out {
+  to { opacity: 0.15; scale: 0.985; }
+}
+@keyframes vt-in {
+  from { opacity: 0.6; }
+  to { opacity: 1; scale: 1; }
+}
+
+/* ============================================================
+   REDUCED MOTION — a11y (ui-ux-pro-max: High severity)
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-aurora,
+  .animate-aurora-slow,
+  .animate-blink,
+  .animate-bounce-slow,
+  .animate-spin-slow,
+  .animate-icon-pop,
+  .animate-char-reveal,
+  .svelte-reveal {
+    animation: none !important;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
