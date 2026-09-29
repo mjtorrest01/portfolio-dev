@@ -23,9 +23,9 @@
 		{#key isDark}
 			<span aria-hidden="true" class="animate-icon-pop">
 				{#if isDark}
-					<Sun size={17} weight="bold" />
+					<Sun aria-hidden="true" size={17} weight="bold" />
 				{:else}
-					<Moon size={17} weight="bold" />
+					<Moon aria-hidden="true" size={17} weight="bold" />
 				{/if}
 			</span>
 		{/key}

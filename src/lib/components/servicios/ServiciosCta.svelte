@@ -56,7 +56,7 @@
 					rel="noreferrer"
 					class="glow-box group flex items-center gap-3 rounded-2xl border-2 border-accent bg-accent px-10 py-5 font-mono text-base font-bold uppercase tracking-wider text-void transition-shadow duration-300 hover:shadow-[0_0_45px_rgba(34,197,94,0.55)] md:text-lg"
 				>
-					<WhatsappLogo size={24} weight="fill" />
+					<WhatsappLogo aria-hidden="true" size={24} weight="fill" />
 					{cta.whatsapp}
 				</a>
 			</Magnetic>
@@ -66,7 +66,7 @@
 					class="group flex items-center gap-3 rounded-2xl border-2 border-line bg-surface/40 px-10 py-5 font-mono text-base uppercase tracking-wider text-fg transition-colors duration-300 hover:border-accent hover:text-accent"
 				>
 					{cta.mail}
-					<ArrowUpRight size={20} weight="bold" class="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+					<ArrowUpRight aria-hidden="true" size={20} weight="bold" class="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
 				</a>
 			</Magnetic>
 		</div>
@@ -84,7 +84,7 @@
 						class="grid h-10 w-10 place-items-center rounded-lg border border-line text-muted transition-all duration-300 hover:border-accent hover:bg-accent hover:text-void hover:shadow-hard-accent"
 						data-cursor="hover"
 					>
-						{#if Icon}<Icon size={18} weight="fill" />{/if}
+						{#if Icon}<Icon aria-hidden="true" size={18} weight="fill" />{/if}
 					</a>
 				{/each}
 			</div>

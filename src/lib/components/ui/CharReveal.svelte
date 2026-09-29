@@ -21,7 +21,8 @@
 	});
 </script>
 
-<span aria-label={text} class={className}>
+<span class={className}>
+	<span class="sr-only">{text}</span>
 	<span aria-hidden="true">
 		{#each words as word, wi (wi)}
 			<span>

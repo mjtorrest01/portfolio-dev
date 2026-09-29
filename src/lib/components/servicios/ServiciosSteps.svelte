@@ -33,7 +33,7 @@
 					</span>
 					<div class="mt-4 flex items-center gap-3">
 						<div class="grid h-10 w-10 place-items-center rounded-lg border-2 border-line bg-void text-accent transition-all duration-300 group-hover:-rotate-6 group-hover:border-accent">
-							<Icon size={20} weight="duotone" />
+							<Icon aria-hidden="true" size={20} weight="duotone" />
 						</div>
 						<h3 class="font-display text-xl font-bold uppercase tracking-tight">
 							{step.title}

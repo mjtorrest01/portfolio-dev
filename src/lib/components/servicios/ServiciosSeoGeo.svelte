@@ -45,7 +45,7 @@
 					></div>
 					<div class="mb-6 flex items-center justify-between gap-3">
 						<div class="grid h-14 w-14 place-items-center rounded-xl border-2 border-line bg-void text-accent transition-transform duration-300 group-hover:-rotate-6 group-hover:border-accent">
-							<Icon size={28} weight="duotone" />
+							<Icon aria-hidden="true" size={28} weight="duotone" />
 						</div>
 						<span class="rounded-full border border-accent/60 bg-accent/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-accent-soft">
 							{card.tag}
@@ -59,7 +59,7 @@
 						{#each card.items as item}
 							<li class="flex items-start gap-2.5 text-[15px] leading-relaxed text-fg-dim">
 								<span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-accent/15 text-accent-soft">
-									<Check size={13} weight="bold" />
+									<Check aria-hidden="true" size={13} weight="bold" />
 								</span>
 								{item}
 							</li>
@@ -102,7 +102,7 @@
 					class="group flex items-center gap-3 rounded-lg border-2 border-accent bg-accent px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider text-void transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.45)]"
 				>
 					{seogeo.cta}
-					<WhatsappLogo size={17} weight="fill" class="transition-transform duration-300 group-hover:scale-110" />
+					<WhatsappLogo aria-hidden="true" size={17} weight="fill" class="transition-transform duration-300 group-hover:scale-110" />
 				</a>
 			</Magnetic>
 		</div>

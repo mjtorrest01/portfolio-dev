@@ -85,7 +85,7 @@
 					rel="noreferrer"
 					class="glow-box flex items-center gap-2 rounded-lg border-2 border-accent bg-accent px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider text-void transition-colors duration-200 hover:bg-accent-soft"
 				>
-					<WhatsappLogo size={15} weight="fill" /> {nav.ctaWhatsapp}
+					<WhatsappLogo aria-hidden="true" size={15} weight="fill" /> {nav.ctaWhatsapp}
 				</a>
 			</Magnetic>
 

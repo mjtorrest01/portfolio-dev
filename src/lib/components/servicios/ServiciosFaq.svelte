@@ -41,7 +41,7 @@
 								open ? 'rotate-45 border-accent bg-accent text-void' : 'border-line text-muted'
 							}`}
 						>
-							<Plus size={16} weight="bold" />
+							<Plus aria-hidden="true" size={16} weight="bold" />
 						</span>
 					</button>
 					{#if open}

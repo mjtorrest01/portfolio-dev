@@ -36,7 +36,7 @@
 				<span
 					class="grid h-9 w-9 place-items-center rounded-lg border-2 border-line transition-all duration-300 group-hover:border-accent group-hover:bg-accent group-hover:text-void"
 				>
-					<ArrowUp size={15} weight="bold" />
+					<ArrowUp aria-hidden="true" size={15} weight="bold" />
 				</span>
 			</button>
 		</div>
@@ -46,7 +46,7 @@
 		<p
 			class="mx-auto flex max-w-7xl items-center justify-center gap-2 px-5 py-5 text-center font-mono text-xs text-faint md:justify-start md:px-8"
 		>
-			<Heart size={13} weight="fill" class="text-accent" /> {footer.made}
+			<Heart aria-hidden="true" size={13} weight="fill" class="text-accent" /> {footer.made}
 		</p>
 	</div>
 

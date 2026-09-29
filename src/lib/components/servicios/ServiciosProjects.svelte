@@ -116,7 +116,7 @@
 									class="grid h-11 w-11 shrink-0 place-items-center rounded-lg border-2 border-line text-muted transition-all duration-300 hover:border-accent hover:bg-accent hover:text-void hover:shadow-hard-accent"
 									data-cursor="hover"
 								>
-									<ArrowUpRight size={18} weight="bold" />
+									<ArrowUpRight aria-hidden="true" size={18} weight="bold" />
 								</a>
 							</div>
 						</TiltCard>
@@ -134,7 +134,7 @@
 					class="group flex items-center gap-3 rounded-lg border-2 border-accent bg-accent px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider text-void transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.45)]"
 				>
 					{work.cta}
-					<WhatsappLogo size={17} weight="fill" class="transition-transform duration-300 group-hover:scale-110" />
+					<WhatsappLogo aria-hidden="true" size={17} weight="fill" class="transition-transform duration-300 group-hover:scale-110" />
 				</a>
 			</Magnetic>
 		</div>

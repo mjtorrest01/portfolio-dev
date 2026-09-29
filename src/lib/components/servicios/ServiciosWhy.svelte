@@ -32,7 +32,7 @@
 						class="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-accent/10 blur-2xl transition-opacity duration-500 group-hover:bg-accent/25"
 					></div>
 					<div class="mb-6 grid h-14 w-14 place-items-center rounded-xl border-2 border-line bg-void text-accent transition-transform duration-300 group-hover:-rotate-6 group-hover:border-accent">
-						<Icon size={28} weight="duotone" />
+						<Icon aria-hidden="true" size={28} weight="duotone" />
 					</div>
 					<h3 class="font-display text-2xl font-bold uppercase tracking-tight">
 						{item.title}

@@ -49,7 +49,7 @@
 					<ul class="mt-8 space-y-3">
 						{#each plan.features as feature}
 							<li class="flex items-start gap-3 text-sm leading-relaxed text-fg-dim">
-								<CheckCircle size={18} weight="fill" class="mt-0.5 shrink-0 text-accent" />
+								<CheckCircle aria-hidden="true" size={18} weight="fill" class="mt-0.5 shrink-0 text-accent" />
 								{feature}
 							</li>
 						{/each}
@@ -65,7 +65,7 @@
 								: 'border-2 border-accent text-accent hover:bg-accent hover:text-void'
 						}`}
 					>
-						<WhatsappLogo size={16} weight="fill" />
+						<WhatsappLogo aria-hidden="true" size={16} weight="fill" />
 						{plans.cta} {plan.name}
 					</a>
 				</div>

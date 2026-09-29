@@ -35,7 +35,7 @@
 				class="relative rounded-2xl border-2 border-line bg-surface/40 p-8"
 			>
 				<div class="absolute -top-5 left-8 grid h-11 w-11 place-items-center rounded-xl border-2 border-accent bg-void text-accent shadow-hard-accent">
-					<RocketLaunch size={22} weight="duotone" />
+					<RocketLaunch aria-hidden="true" size={22} weight="duotone" />
 				</div>
 				<p class="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
 					&lt; {about.missionLabel} /&gt;
@@ -47,7 +47,7 @@
 					</span>
 					<span class="font-mono text-xs uppercase tracking-wider text-fg"> MJ Torres </span>
 					<span class="text-accent" aria-hidden="true">
-						<Crosshair size={16} weight="duotone" />
+						<Crosshair aria-hidden="true" size={16} weight="duotone" />
 					</span>
 				</div>
 			</div>

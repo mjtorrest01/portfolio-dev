@@ -249,7 +249,7 @@
 							class="group flex items-center justify-center gap-2 rounded-lg border-2 border-accent bg-accent px-6 py-3.5 font-mono text-sm font-bold uppercase tracking-wider text-void transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.45)]"
 						>
 							{modal.visit}
-							<ArrowUpRight
+							<ArrowUpRight aria-hidden="true"
 								size={16}
 								weight="bold"
 								class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -302,7 +302,7 @@
 									class="group flex items-center gap-1 rounded-md border border-line bg-bg/80 px-2.5 py-1 font-mono text-[11px] text-fg-dim backdrop-blur transition-colors duration-300 hover:border-accent hover:text-accent-soft"
 								>
 									{m.sourceLabel}
-									<ArrowUpRight
+									<ArrowUpRight aria-hidden="true"
 										size={12}
 										weight="bold"
 										class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -338,7 +338,7 @@
 										<span
 											class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-accent/15 text-accent-soft"
 										>
-											<Check size={13} weight="bold" />
+											<Check aria-hidden="true" size={13} weight="bold" />
 										</span>
 										{item}
 									</li>

@@ -104,7 +104,7 @@
 					class="group flex items-center gap-3 rounded-lg border-2 border-accent bg-accent px-7 py-3.5 font-mono text-sm font-bold uppercase tracking-wider text-void transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.45)]"
 				>
 					{hero.cta1}
-					<ArrowDown size={16} weight="bold" class="transition-transform duration-300 group-hover:translate-y-1" />
+					<ArrowDown aria-hidden="true" size={16} weight="bold" class="transition-transform duration-300 group-hover:translate-y-1" />
 				</a>
 			</Magnetic>
 			<Magnetic strength={0.35}>
@@ -126,7 +126,7 @@
 						class="grid h-10 w-10 place-items-center rounded-lg border border-line text-muted transition-all duration-300 hover:border-accent hover:bg-accent hover:text-void hover:shadow-hard-accent"
 						data-cursor="hover"
 					>
-						{#if Icon}<Icon size={17} weight="fill" />{/if}
+						{#if Icon}<Icon aria-hidden="true" size={17} weight="fill" />{/if}
 					</a>
 				{/each}
 			</div>
@@ -159,7 +159,7 @@
 			data-cursor="hover"
 		>
 			{hero.scroll}
-			<span class="animate-bounce-slow"><ArrowDown size={18} class="text-accent" /></span>
+			<span class="animate-bounce-slow"><ArrowDown aria-hidden="true" size={18} class="text-accent" /></span>
 		</a>
 	</div>
 </section>

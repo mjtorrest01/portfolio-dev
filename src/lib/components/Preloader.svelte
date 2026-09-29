@@ -37,6 +37,7 @@
 
 <div
 	class="fixed inset-0 z-[90] flex flex-col justify-between bg-void p-6 md:p-10"
+	role="status"
 	aria-label="Cargando"
 >
 	<div class="flex items-center justify-between font-mono text-xs text-muted">
