@@ -1,6 +1,6 @@
 const SITE_URL = 'https://mjtorres.dev';
 
-export const prerender = true;
+export const prerender = false;
 
 /** OpenAPI mínimo de la superficie pública (solo lectura, sin auth). */
 export function GET() {

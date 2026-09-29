@@ -6,7 +6,7 @@ export const prerender = true;
  * Se sirve con 200 + text/markdown para que los checks de descubrimiento pasen
  * sin inventar endpoints OAuth que no existen.
  */
-const BODY = `# Agent auth — mjtorres.dev
+const BODY = `# auth.md — mjtorres.dev
 
 This site is fully public. No registration, no API keys, no OAuth.
 

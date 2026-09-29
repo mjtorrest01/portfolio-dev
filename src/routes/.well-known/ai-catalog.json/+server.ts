@@ -1,6 +1,6 @@
 const SITE_URL = 'https://mjtorres.dev';
 
-export const prerender = true;
+export const prerender = false;
 
 /** Manifiesto ARD (Agentic Resource Discovery): capacidades del sitio para agentes. */
 export function GET() {

@@ -4,7 +4,7 @@ import { profile } from '$lib/data';
 /** Representación Markdown del sitio para agentes (Accept: text/markdown). */
 export function siteMarkdown(locale: Locale, messages: Messages): string {
 	const lines: string[] = [
-		`# ${profile.name} — ${messages.meta.title}`,
+		`# ${messages.meta.title}`,
 		'',
 		`> ${messages.meta.description}`,
 		'',
