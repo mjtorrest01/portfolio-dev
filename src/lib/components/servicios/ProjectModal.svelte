@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ArrowUpRight, Check, X } from 'phosphor-svelte';
+	import { imagePath } from '$lib/assets';
 	import type { Project, WorkModalMessages } from '$lib/types';
 
 	interface Props {
@@ -118,8 +119,16 @@
 			<!-- Hero -->
 			<div class="relative h-60 overflow-hidden border-b border-line bg-void sm:h-80">
 				{#if project.image}
+					{@const img = imagePath(
+						project.image,
+						'(min-width: 768px) 860px, calc(100vw - 32px)'
+					)}
 					<img
-						src={project.image}
+						src={img.src}
+						srcset={img.srcset}
+						sizes={img.sizes}
+						width={img.width}
+						height={img.height}
 						alt={project.name}
 						class="absolute inset-0 h-full w-full object-cover object-top"
 					/>

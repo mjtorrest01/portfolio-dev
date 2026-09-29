@@ -53,7 +53,7 @@
 	<div class="flex w-max animate-marquee gap-10 py-4 [--marquee-duration:40s]" aria-hidden="true">
 		{#each Array.from({ length: 12 }) as _, i}
 			<span
-				class="flex items-center gap-10 whitespace-nowrap font-display text-2xl font-bold uppercase tracking-tight text-outline"
+				class="flex items-center gap-10 whitespace-nowrap font-display text-2xl font-bold uppercase tracking-tight text-outline-dim"
 			>
 				<span>{profile.firstName}</span>
 				<span class="h-2 w-2 rotate-45 bg-accent"></span>

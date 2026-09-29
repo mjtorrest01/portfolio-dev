@@ -20,7 +20,7 @@
 			</span>
 		{/each}
 	</div>
-	<div class="animate-marquee-reverse mt-3 flex w-max gap-8 text-outline [--marquee-duration:38s]">
+	<div class="animate-marquee-reverse mt-3 flex w-max gap-8 text-outline-dim [--marquee-duration:38s]">
 		{#each [...marquee.b, ...marquee.b] as item, i}
 			<span class="flex items-center gap-8 whitespace-nowrap">
 				<span class="font-display text-2xl font-bold uppercase tracking-tight md:text-3xl">{item}</span>

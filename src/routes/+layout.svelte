@@ -2,6 +2,9 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/theme.svelte';
+	import grotesk from '$lib/fonts/space-grotesk-latin.woff2';
+	import archivo from '$lib/fonts/archivo-latin.woff2';
+	import jetbrains from '$lib/fonts/jetbrains-mono-latin.woff2';
 
 	let { children } = $props();
 
@@ -11,19 +14,9 @@
 </script>
 
 <svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
-		rel="stylesheet"
-	/>
-	<style>
-		:root {
-			--font-grotesk: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
-			--font-archivo: 'Archivo', ui-sans-serif, system-ui, sans-serif;
-			--font-jetbrains: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-		}
-	</style>
+	<link rel="preload" href={grotesk} as="font" type="font/woff2" crossorigin="anonymous" />
+	<link rel="preload" href={archivo} as="font" type="font/woff2" crossorigin="anonymous" />
+	<link rel="preload" href={jetbrains} as="font" type="font/woff2" crossorigin="anonymous" />
 </svelte:head>
 
 {@render children()}

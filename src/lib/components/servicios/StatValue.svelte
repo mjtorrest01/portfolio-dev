@@ -25,10 +25,14 @@
 				io.disconnect();
 				const start = performance.now();
 				const dur = 1600;
+				let last = 0;
 				const step = (now: number) => {
 					const p = Math.min(1, (now - start) / dur);
 					const eased = 1 - Math.pow(1 - p, 4);
-					display = Math.round(value * eased);
+					if (p >= 1 || now - last >= 80) {
+						last = now;
+						display = Math.round(value * eased);
+					}
 					if (p < 1) raf = requestAnimationFrame(step);
 				};
 				raf = requestAnimationFrame(step);

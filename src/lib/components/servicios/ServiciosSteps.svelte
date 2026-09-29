@@ -28,7 +28,7 @@
 			{#each steps.items as step, i}
 				{@const Icon = ICONS[(step.icon as StepIconName)] ?? ChatTeardropDots}
 				<div use:reveal={{ delay: i * 0.12 }} class="group relative">
-					<span class="text-outline font-display text-8xl font-bold leading-none" aria-hidden="true">
+					<span class="text-outline-dim font-display text-8xl font-bold leading-none" aria-hidden="true">
 						{step.number}
 					</span>
 					<div class="mt-4 flex items-center gap-3">

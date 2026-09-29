@@ -64,8 +64,8 @@
 		</div>
 		<div class="h-2 w-full overflow-hidden rounded-full border border-line bg-surface">
 			<div
-				class="h-full bg-gradient-to-r from-accent-deep via-accent to-mint"
-				style="width: {progress}%"
+				class="h-full w-full origin-left bg-gradient-to-r from-accent-deep via-accent to-mint"
+				style="transform: scaleX({progress / 100})"
 			></div>
 		</div>
 	</div>

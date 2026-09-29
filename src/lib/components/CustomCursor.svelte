@@ -14,6 +14,7 @@
 	let ringX = -200;
 	let ringY = -200;
 	let raf = 0;
+	let idle = true;
 	let dotEl: HTMLDivElement | null = $state(null);
 	let ringEl: HTMLDivElement | null = $state(null);
 
@@ -27,7 +28,24 @@
 			'transform',
 			`translate(${ringX}px, ${ringY}px) translate(-50%, -50%) scale(${pressed ? 0.6 : hovering ? 1.9 : 1})`
 		);
+		const settled =
+			Math.abs(x - dotX) < 0.05 &&
+			Math.abs(y - dotY) < 0.05 &&
+			Math.abs(x - ringX) < 0.05 &&
+			Math.abs(y - ringY) < 0.05;
+		if (settled) {
+			raf = 0;
+			idle = true;
+			return;
+		}
 		raf = requestAnimationFrame(tick);
+	}
+
+	function wake() {
+		if (idle) {
+			idle = false;
+			raf = requestAnimationFrame(tick);
+		}
 	}
 
 	onMount(() => {
@@ -38,26 +56,33 @@
 		const onMove = (e: PointerEvent) => {
 			x = e.clientX;
 			y = e.clientY;
+			wake();
 		};
 		const onOver = (e: PointerEvent) => {
 			const target = e.target as HTMLElement | null;
 			hovering = Boolean(target?.closest("[data-cursor='hover']"));
+			wake();
 		};
-		const onDown = () => (pressed = true);
-		const onUp = () => (pressed = false);
+		const onDown = () => {
+			pressed = true;
+			wake();
+		};
+		const onUp = () => {
+			pressed = false;
+			wake();
+		};
 
 		window.addEventListener('pointermove', onMove, { passive: true });
 		window.addEventListener('pointerover', onOver, { passive: true });
 		window.addEventListener('pointerdown', onDown);
 		window.addEventListener('pointerup', onUp);
-		raf = requestAnimationFrame(tick);
 
 		return () => {
 			window.removeEventListener('pointermove', onMove);
 			window.removeEventListener('pointerover', onOver);
 			window.removeEventListener('pointerdown', onDown);
 			window.removeEventListener('pointerup', onUp);
-			cancelAnimationFrame(raf);
+			if (raf) cancelAnimationFrame(raf);
 			document.body.classList.remove('cursor-live');
 		};
 	});

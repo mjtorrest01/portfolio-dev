@@ -6,6 +6,7 @@
 	import Magnetic from '$lib/components/ui/Magnetic.svelte';
 	import ProjectModal from '$lib/components/servicios/ProjectModal.svelte';
 	import { reveal } from '$lib/animations';
+	import { imagePath } from '$lib/assets';
 	import type { Messages, Project, WorkMessages } from '$lib/types';
 
 	interface Props {
@@ -68,8 +69,16 @@
 
 							<div class="relative mb-6 h-44 overflow-hidden rounded-xl border border-line bg-void md:h-52">
 								{#if project.image}
+									{@const img = imagePath(
+										project.image,
+										'(min-width: 768px) 560px, calc(100vw - 64px)'
+									)}
 									<img
-										src={project.image}
+										src={img.src}
+										srcset={img.srcset}
+										sizes={img.sizes}
+										width={img.width}
+										height={img.height}
 										alt={project.name}
 										loading="lazy"
 										decoding="async"

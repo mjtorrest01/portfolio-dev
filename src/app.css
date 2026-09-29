@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@import "./fonts.css";
+
+:root {
+  --font-grotesk: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-archivo: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
 
 /* ============================================================
    DESIGN TOKENS — dual theme (dark / light)
@@ -18,7 +25,7 @@
   --t-fg: 222 47% 11%;
   --t-fg-dim: 215 25% 27%;
   --t-muted: 215 20% 45%;
-  --t-faint: 215 14% 55%;
+  --t-faint: 215 14% 42%;
   --t-accent: 142 76% 36%;
   --t-accent-soft: 142 71% 45%;
   --t-accent-deep: 142 84% 25%;
@@ -44,7 +51,7 @@
     --t-fg: 210 40% 98%;
     --t-fg-dim: 210 40% 93%;
     --t-muted: 215 16% 65%;
-    --t-faint: 215 16% 40%;
+    --t-faint: 215 16% 52%;
     --t-accent: 142 71% 45%;
     --t-accent-soft: 142 71% 54%;
     --t-accent-deep: 142 76% 36%;
@@ -69,7 +76,7 @@
   --t-fg: 210 40% 98%;
   --t-fg-dim: 210 40% 93%;
   --t-muted: 215 16% 65%;
-  --t-faint: 215 16% 40%;
+  --t-faint: 215 16% 52%;
   --t-accent: 142 71% 45%;
   --t-accent-soft: 142 71% 54%;
   --t-accent-deep: 142 76% 36%;
@@ -93,7 +100,7 @@
   --t-fg: 222 47% 11%;
   --t-fg-dim: 215 25% 27%;
   --t-muted: 215 20% 45%;
-  --t-faint: 215 14% 55%;
+  --t-faint: 215 14% 42%;
   --t-accent: 142 76% 36%;
   --t-accent-soft: 142 71% 45%;
   --t-accent-deep: 142 84% 25%;
@@ -272,6 +279,10 @@ body {
 @utility text-outline {
   color: transparent;
   -webkit-text-stroke: 1.5px color-mix(in srgb, hsl(var(--t-fg)) 24%, transparent);
+}
+@utility text-outline-dim {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, hsl(var(--t-fg)) 40%, transparent);
 }
 @utility text-outline-green {
   color: transparent;
