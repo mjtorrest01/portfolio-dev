@@ -87,8 +87,7 @@ fbq('track', 'PageView');`
 			return;
 		}
 		if (getConsent() === null) {
-			const timer = setTimeout(() => (visible = true), 2000);
-			return () => clearTimeout(timer);
+			visible = true;
 		}
 	});
 

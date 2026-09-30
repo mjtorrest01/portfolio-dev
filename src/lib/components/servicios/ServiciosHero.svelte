@@ -62,7 +62,7 @@
 	>
 		<p
 			class="mb-6 flex items-center gap-3 font-mono text-sm text-accent"
-			style="animation: svelte-fade-up 0.6s cubic-bezier(0.16,1,0.3,1) 0.55s both"
+			style="animation: svelte-fade-up 0.6s cubic-bezier(0.16,1,0.3,1) 0.25s both"
 		>
 			<span class="relative flex h-2.5 w-2.5">
 				<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"></span>
@@ -75,20 +75,20 @@
 
 		<h1 class="font-display text-[13.5vw] font-bold leading-[0.9] tracking-tight sm:text-[5.5rem] lg:text-[7rem]">
 			<span class="block">
-				<CharReveal text={hero.line1} baseDelay={0.75} stagger={0.03} />
+				<CharReveal text={hero.line1} baseDelay={0.35} stagger={0.03} />
 			</span>
 			<span class="block text-outline-green">
-				<CharReveal text={hero.line2a} baseDelay={1.05} stagger={0.03} />
+				<CharReveal text={hero.line2a} baseDelay={0.5} stagger={0.03} />
 				{' '}
 				<span class="glow-text text-accent">
-					<CharReveal text={hero.line2b} baseDelay={1.3} stagger={0.04} />
+					<CharReveal text={hero.line2b} baseDelay={0.65} stagger={0.04} />
 				</span>
 			</span>
 		</h1>
 
 		<p
 			class="mt-6 max-w-xl text-lg leading-relaxed text-muted md:text-xl"
-			style="animation: svelte-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 1.6s both"
+			style="animation: svelte-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.45s both"
 		>
 			{hero.sub} <span class="glow-text font-bold text-accent">{hero.subPrice}</span>
 			{hero.subIn}
@@ -96,7 +96,7 @@
 
 		<div
 			class="mt-9 flex flex-wrap items-center gap-4"
-			style="animation: svelte-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 1.85s both"
+			style="animation: svelte-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.6s both"
 		>
 			<Magnetic strength={0.35}>
 				<a
@@ -134,7 +134,7 @@
 
 		<div
 			class="mt-14 grid max-w-2xl gap-6 sm:grid-cols-3"
-			style="animation: svelte-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 2.1s both"
+			style="animation: svelte-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.8s both"
 		>
 			{#each hero.stats as stat}
 				<div class="rounded-xl border-2 border-line bg-surface/40 px-6 py-5 transition-colors duration-300 hover:border-accent">

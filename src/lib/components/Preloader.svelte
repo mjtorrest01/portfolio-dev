@@ -17,17 +17,17 @@
 
 	onMount(() => {
 		const timer = setInterval(() => {
-			progress = Math.min(100, progress + Math.random() * 13 + 4);
+			progress = Math.min(100, progress + Math.random() * 16 + 9);
 			if (progress >= 100 && !done) {
 				done = true;
 				clearInterval(timer);
-				setTimeout(onDone, 350);
+				setTimeout(onDone, 200);
 			}
-		}, 85);
+		}, 60);
 		const lines = setInterval(() => {
 			lineCount += 1;
 			if (lineCount >= boot.length) clearInterval(lines);
-		}, 300);
+		}, 100);
 		return () => {
 			clearInterval(timer);
 			clearInterval(lines);
