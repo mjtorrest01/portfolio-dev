@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Check, MagnifyingGlass, Robot, WhatsappLogo } from 'phosphor-svelte';
-	import { waLink } from '$lib/data-servicios';
-	import SectionTitle from '$lib/components/SectionTitle.svelte';
+		import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import Magnetic from '$lib/components/ui/Magnetic.svelte';
 	import { reveal } from '$lib/animations';
 	import type { Messages, SeoGeoMessages } from '$lib/types';
@@ -96,9 +95,7 @@
 		<div class="mt-10 flex justify-center">
 			<Magnetic strength={0.35}>
 				<a
-					href={waLink(seogeo.ctaMsg)}
-					target="_blank"
-					rel="noreferrer"
+					href="#planes"
 					class="group flex items-center gap-3 rounded-lg border-2 border-accent bg-accent px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider text-void transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.45)]"
 				>
 					{seogeo.cta}
